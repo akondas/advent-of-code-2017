@@ -22,5 +22,6 @@ final class Command extends ConsoleCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln(sprintf('Inverse captcha: <info>%s</info>', InverseCaptcha::sum($input->getArgument('input'))));
+        $output->writeln(sprintf('Inverse captcha (halfway around): <info>%s</info>', InverseCaptcha::sum2($input->getArgument('input'))));
     }
 }
